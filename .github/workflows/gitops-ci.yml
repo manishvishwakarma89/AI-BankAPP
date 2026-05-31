@@ -70,6 +70,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add k8s/bankapp-deployment.yml
-          git diff --staged --quiet || git commit -m "ci: update bankapp image to ${{ steps.tag.outputs.sha_short }} [skip ci]"
-          git push
+          git fetch origin feat/gitops
+          git reset --hard origin/feat/gitops
+          # make your changes here
+          git add .
+          git commit -m "ci: update bankapp image to $IMAGE_TAG [skip ci]"
+          git push origin feat/gitops
