@@ -153,8 +153,4 @@ Code Push → GitHub Actions → Build & Push to DockerHub → Update k8s manife
 
 ---
 
-<div align="center">
-
-**TrainWithShubham** — Happy Learning
-
 </div>
